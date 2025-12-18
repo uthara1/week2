@@ -1,0 +1,105 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Card */
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+/* Heading */
+.card h3 {
+    font-weight: 600;
+}
+
+/* Input */
+input.form-control {
+    border-radius: 8px;
+}
+
+/* Buttons */
+button {
+    border-radius: 8px !important;
+}
+
+/* Task list */
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-group-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed task */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* Error message */
+#error {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Filter buttons */
+.btn-group .btn {
+    border-radius: 20px !important;
+}
+
+/* Counter */
+p {
+    font-weight: 500;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark .list-group-item {
+    background: #2a2a2a;
+    color: white;
+}
+
+body.dark input.form-control {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark input::placeholder {
+    color: #bbb;
+}
+
+body.dark .btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+
+body.dark .btn-outline-dark:hover {
+    background: white;
+    color: black;
+}

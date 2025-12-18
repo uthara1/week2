@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f4f3ab, #fce4ec);
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: white;
+            width: 340px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .student {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            margin: 8px 0;
+            background-color: #f5aad9;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .student:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+        }
+
+        .name {
+            font-weight: bold;
+            color: #374151;
+            text-transform: capitalize;
+        }
+
+        .marks {
+            background-color: #524de0;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>📘 Student Marks</h2>
+    <div id="students"></div>
+</div>
+
+<script>
+    let students = [
+        { name: "gana", marks: 80 },
+        { name: "uthara", marks: 85 },
+        { name: "ajanya", marks: 90 }
+    ];
+
+    let container = document.getElementById("students");
+
+    students.forEach(student => {
+       
+        console.log(student.name + " - " + student.marks);
+
+        let div = document.createElement("div");
+        div.className = "student";
+        div.innerHTML = `
+            <span class="name">${student.name}</span>
+            <span class="marks">${student.marks}</span>
+        `;
+
+        container.appendChild(div);
+    });
+</script>
+
+</body>
+</html>
+
+

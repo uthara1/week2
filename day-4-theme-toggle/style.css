@@ -1,0 +1,23 @@
+/* Light Theme */
+.light {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Theme */
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
